@@ -1,0 +1,37 @@
+//  ContentService service = new ContentService_Service().getBasicHttpBindingContentService();
+//        service.downloadContent();
+//        URL contentServiceLocation = new URL("http://srv-ecm-llr8.itps.local:8080/les-services/services/ContentService?wsdl");
+//        ContentService contentService = WebServiceUtil.getContentService(contentServiceLocation, token);
+//        ((BindingProvider) contentService).getBinding().setHandlerChain(WebServiceUtil.getHandlers());     //todo try to comment out
+//        WebServiceUtil.setSoapHeader((WSBindingProvider) contentService, fOTAuth);
+//
+//        SOAPMessage message = MessageFactory.newInstance().createMessage();
+//        SOAPPart part = message.getSOAPPart();
+//        SOAPEnvelope envelope = part.getEnvelope();
+//        SOAPHeader header = envelope.getHeader();
+//
+//        SOAPHeaderElement otElement;
+//
+//        otElement = header.addHeaderElement(
+//                new QName( "urn:Core.service.livelink.opentext.com", "ContentType" ) );
+//        otElement.setPrefix( "" );
+//        otElement.addTextNode("multipart/mixed");
+//
+//        Headers.create(otElement);
+//
+//        ((WSBindingProvider) contentService).setOutboundHeaders(Headers.create(otElement));
+//
+//        DataHandler handler = contentService.downloadContent(attach);
+//
+//
+//        InputStream inputStream = handler.getInputStream();
+////        BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+//
+//        FileOutputStream outputStream = new FileOutputStream("c:\\1.docx");
+//
+//        int read = 0;
+//        byte[] bytes = new byte[1024];
+//
+//        while ((read = inputStream.read(bytes)) != -1) {
+//            outputStream.write(bytes, 0, read);
+//        }
